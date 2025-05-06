@@ -56,13 +56,60 @@ input[type="checkbox"]:focus {
 .modal-dialog {
   max-width: 800px;
 
-  @media (max-width: 816px) {
-    margin: 0 8px;
+  @media (max-width: 848px) {
+    margin: 1.75rem 1.5rem;
   }
 }
 
-@media screen and (max-width: 400px) {
+.contact__input::-webkit-slider-thumb {
+  background-color: var(--marrom-claro);
+}
+
+.contact__input::-webkit-slider-runnable-track {
+  background-color: #404040;
+}
+
+.contact__input::-moz-range-track {
+  background-color: #404040;
+}
+
+.footer {
+  padding: 1.5rem 1.875rem 2rem 1.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--marrom-claro);
+}
+
+.footer__socials {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+@media screen and (max-width: 432px) {
   .modal-body>img {
-    width: 100%;
+    width: 100%;  
+  }
+}
+
+@media screen and (max-width: 312px) {
+  .products__card {
+    width: 100% !important;
+  }
+}
+
+[data-bs-theme="dark"] {
+  color: white;
+
+  .nav-link,
+  .card-body,
+  .offcanvas,
+  .accordion,
+  .btn {
+    --bs-nav-link-color: white;
+    --bs-card-color: white;
+    --bs-offcanvas-color: white;
+    --bs-body-color: white;
   }
 }
