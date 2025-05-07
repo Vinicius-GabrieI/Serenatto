@@ -18,6 +18,29 @@ input[type="checkbox"]:focus {
   outline: none;
 }
 
+.navbar {
+  width: 100vw;
+  padding: 1.25rem 1.875rem;
+
+  @media (min-width: 768px) {
+    .navbar {
+      padding: 1rem clamp(1.875rem, 11.11vw, 10rem);
+    }
+  }
+}
+
+.navbar__logo {
+  width: clamp(7.857rem, 33.521vw, 14.05rem);
+}
+
+.nav-item {
+  font-size: 1rem;
+
+  @media (min-width: 992px) {
+    font-size: 1.25rem;
+  }
+}
+
 .banner-1 {
   background-image: url(./assets/banner-1.png);
 }
@@ -39,8 +62,30 @@ input[type="checkbox"]:focus {
   background-attachment: fixed;
 }
 
-.banners-title {
+.banner-description {
   --bs-bg-opacity: .2;
+  padding: clamp(1.5rem, 6.4vw, 2.625rem) clamp(1rem, 4.27vw, 2.875rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.813rem;
+}
+
+.banner__title {
+  font-size: 1.75rem;
+}
+
+.services,
+.products {
+  padding: clamp(2.5rem, 10.67vw, 5rem);
+}
+
+.services__title,
+.products__title {
+  font-size: 2rem;
+}
+
+.products__card-text {
+  font-size: 1.75rem;
 }
 
 .btn-default {
@@ -59,6 +104,18 @@ input[type="checkbox"]:focus {
   @media (max-width: 848px) {
     margin: 1.75rem 1.5rem;
   }
+}
+
+.contact {
+  padding: 5rem 0;
+}
+
+.contact__container {
+  padding: 0 0.42rem;
+}
+
+.contact__title {
+  margin-bottom: 2rem;
 }
 
 .contact__input::-webkit-slider-thumb {

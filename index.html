@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="./" type="image/x-icon">
   <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
   <title>Serenatto</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -19,13 +18,13 @@
 
 <body data-bs-theme="light">
   <header>
-    <nav class="navbar-expand-lg navbar bg-body-tertiary fixed-top">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top px-3 px-md-4 px-lg-5">
+      <div class="container-fluid px-0">
         <a class="navbar-brand" href="#">
-          <img src="./assets/logo.png" alt="Logo da cafeteria Serenatto">
+          <img src="./assets/logo.png" alt="Logo da cafeteria Serenatto" class="navbar__logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          aria-controls="offcanvasNavbar" aria-label="Alternar navegação">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -33,19 +32,22 @@
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
               <img src="./assets/logo-mobile.png" alt="Logo da cafeteria Serenatto">
             </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Início</a>
               </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="#">Sobre</a>
               </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="#contact">Contato</a>
               </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <div class="form-check form-switch">
@@ -54,6 +56,7 @@
                   </div>
                 </a>
               </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -62,48 +65,49 @@
 
   <main>
     <section class="banners banner-1 d-flex flex-column justify-content-center">
-      <div class="banners-title text-center bg-body-secondary py-5">
-        <h2 class="fw-bold">Sua pausa para desfrutar a vida.</h2>
-        <p>Boas-vindas ao & Bistrô Serenatto! Um ambiente aconchegante e acolhedor para apreciar um bom café.</p>
+      <div class="banner-description text-center bg-body-secondary">
+        <h2 class="banner__title fw-semibold m-0">Sua pausa para desfrutar a vida.</h2>
+        <p class="m-0">Boas-vindas ao Café & Bistrô Serenatto! Um ambiente aconchegante e acolhedor para apreciar um bom
+          café.</p>
       </div>
     </section>
 
-    <section class="services py-5">
-      <h2 class="text-center fw-bold pb-1">Nossos serviços</h2>
+    <section class="services px-0">
+      <h2 class="services__title text-center fw-semibold pb-1">Nossos serviços</h2>
       <div class="container d-flex justify-content-around flex-wrap">
         <div class="card m-4" style="width: 20rem;">
           <img src="./assets/cafe-card.png" class="card-img-top"
             alt="Balcão de padaria tradicional com alimentos diversos">
-          <div class="card-body">
-            <h5 class="card-title py-2 fw-bold">Café & Bistrô</h5>
-            <p class="card-text">Nosso bistrô oferece uma ampla variedade de cafés, smoothies, deliciosos
+          <div class="card-body p-4">
+            <h5 class="card-title mb-4">Café & Bistrô</h5>
+            <p class="card-text mb-4">Nosso bistrô oferece uma ampla variedade de cafés, smoothies, deliciosos
               salgados e sobremesas. Uma excelente opção para quem busca um lugar tranquilo e
               aconchegante.</p>
-            <a href="#" class="btn btn-default btn-primary w-100 fw-bold" data-bs-toggle="offcanvas"
+            <a href="#" class="btn btn-default btn-primary w-100 fw-medium" data-bs-toggle="offcanvas"
               data-bs-target="#canvas-1" aria-controls="offcanvasRight">Quero detalhes</a>
           </div>
         </div>
 
         <div class="card m-4" style="width: 20rem;">
           <img src="./assets/buffet-card.png" class="card-img-top" alt="Mesa de buffet com alimentos diversos">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Buffet</h5>
-            <p class="card-text">Buffet e catering personalizado para eventos, produções e celebrações. Com
+          <div class="card-body p-4">
+            <h5 class="card-title mb-4">Buffet</h5>
+            <p class="card-text mb-4">Buffet e catering personalizado para eventos, produções e celebrações. Com
               um menu variado e adaptável às preferências do cliente, atendimento atencioso e
               profissional.</p>
-            <a href="#" class="btn btn-default btn-primary w-100 fw-bold mt-3" data-bs-toggle="offcanvas"
+            <a href="#" class="btn btn-default btn-primary w-100 fw-medium" data-bs-toggle="offcanvas"
               data-bs-target="#canvas-2" aria-controls="offcanvasRight">Quero detalhes</a>
           </div>
         </div>
 
         <div class="card m-4" style="width: 20rem;">
           <img src="./assets/delivery-card.png" class="card-img-top" alt="Caixa aberta armazenando comidas diversas">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Delivery</h5>
-            <p class="card-text">Para quem deseja desfrutar no conforto de casa, oferecemos delivery dos
+          <div class="card-body p-4">
+            <h5 class="card-title mb-4">Delivery</h5>
+            <p class="card-text mb-4">Para quem deseja desfrutar no conforto de casa, oferecemos delivery dos
               produtos. Com o mesmo cardápio variado de sempre, sem perder nosso sabor e padrão de
               qualidade.</p>
-            <a href="#" class="btn btn-default btn-primary w-100 fw-bold mt-3" data-bs-toggle="offcanvas"
+            <a href="#" class="btn btn-default btn-primary w-100 fw-medium" data-bs-toggle="offcanvas"
               data-bs-target="#canvas-3" aria-controls="offcanvasRight">Quero detalhes</a>
           </div>
         </div>
@@ -111,15 +115,16 @@
     </section>
 
     <section class="banners banner-2 d-flex flex-column justify-content-center">
-      <div class="banners-title text-center bg-body-secondary py-5">
-        <h2 class="fw-bold">Portas abertas para todos os públicos.</h2>
-        <p>Nosso espaço é aconchegante, pet friendly, preparado para receber crianças e pessoas com deficiência. Também
+      <div class="banner-description text-center bg-body-secondary">
+        <h2 class="banner__title fw-semibold m-0">Portas abertas para todos os públicos.</h2>
+        <p class="m-0">Nosso espaço é aconchegante, pet friendly, preparado para receber crianças e pessoas com
+          deficiência. Também
           oferecemos ambiente de coworking!</p>
       </div>
     </section>
 
-    <section class="products py-5">
-      <h2 class="text-center fw-bold pb-1">Nossos Produtos</h2>
+    <section class="products px-0">
+      <h2 class="products__title text-center fw-bold pb-1">Nossos Produtos</h2>
 
       <div class="container row mx-auto g-4">
         <div class="col-12 col-md-6 col-xl-4 p-0">
@@ -128,7 +133,7 @@
             <img src="./assets/produtos-cafe-tradicional.png" class="card-img-top"
               alt="Xícara de café preto com grãos de café ao lado">
             <div class="card-body text-center p-0">
-              <h3 class="card-text fw-bold">Cafés Tradicionais</h3>
+              <h3 class="products__card-text card-text fw-bold">Cafés Tradicionais</h3>
             </div>
           </div>
         </div>
@@ -139,7 +144,7 @@
             <img src="./assets/produtos-cafe-especial.png" class="card-img-top"
               alt="Xícara de café com leite decorado com arte em espuma">
             <div class="card-body text-center p-0">
-              <h3 class="card-text fw-bold">Cafés Especiais</h3>
+              <h3 class="products__card-text card-text fw-bold">Cafés Especiais</h3>
             </div>
           </div>
         </div>
@@ -150,7 +155,7 @@
             <img src="./assets/produtos-vitaminas.png" class="card-img-top"
               alt="Copos coloridos com smoothies de frutas e frutas frescas ao redor">
             <div class="card-body text-center p-0">
-              <h3 class="card-text fw-bold">Smoothies e Vitaminas</h3>
+              <h3 class="products__card-text card-text fw-bold">Smoothies e Vitaminas</h3>
             </div>
           </div>
         </div>
@@ -161,7 +166,7 @@
             <img src="./assets/produtos-paes.png" class="card-img-top"
               alt="Cesta com pães variados, incluindo focaccias e baguetes">
             <div class="card-body text-center p-0">
-              <h3 class="card-text fw-bold">Pães e Focaccias</h3>
+              <h3 class="products__card-text card-text fw-bold">Pães e Focaccias</h3>
             </div>
           </div>
         </div>
@@ -172,7 +177,7 @@
             <img src="./assets/produtos-doces.png" class="card-img-top"
               alt="Bolo recheado com morangos e frutas vermelhas, coberto com açúcar de confeiteiro">
             <div class="card-body text-center p-0">
-              <h3 class="card-text fw-bold">Doces</h3>
+              <h3 class="products__card-text card-text fw-bold">Doces</h3>
             </div>
           </div>
         </div>
@@ -183,7 +188,7 @@
             <img src="./assets/produtos-salgados.png" class="card-img-top"
               alt="Torta salgada dourada cortada em fatias">
             <div class="card-body text-center p-0">
-              <h3 class="card-text fw-bold">Salgados</h3>
+              <h3 class="products__card-text card-text fw-bold">Salgados</h3>
             </div>
           </div>
         </div>
@@ -193,45 +198,45 @@
     <section class="banners banner-3">
     </section>
 
-    <section class="contact py-4 container">
-      <div class="row">
-        <div class="col-10 col-xl-8 mx-auto">
-          <div class="border border-2 rounded p-3">
-            <h3 class="fw-bold">Entre em contato!</h3>
+    <section class="contact container">
+      <div class="row w-100 mx-auto">
+        <div class="contact__container col-10 col-xl-8 mx-auto">
+          <div class="border border-2 rounded p-4">
+            <h3 class="contact__title fw-semibold">Entre em contato!</h3>
             <form id="contact">
-              <div class="form-floating mb-3">
+              <div class="form-floating mb-4">
                 <input type="text" class="form-control" id="floatingNome" placeholder="Nome">
                 <label for="floatingNome">Nome</label>
               </div>
 
-              <div class="form-floating mb-3">
+              <div class="form-floating mb-4">
                 <input type="email" class="form-control" id="floatingEmail" placeholder="nome@exemplo.com">
                 <label for="floatingEmail">Email</label>
               </div>
 
-              <div class="form-floating mb-3">
+              <div class="form-floating mb-4">
                 <input type="number" class="form-control" id="floatingTelefone" placeholder="Telefone">
                 <label for="floatingTelefone">Telefone</label>
               </div>
 
-              <select class="form-select mb-3" aria-label="Default select example">
+              <select class="form-select mb-4" aria-label="Selecione sua preferência de contato">
                 <option selected>Preferência de contato</option>
                 <option value="1">Email</option>
                 <option value="2">Whatsapp</option>
                 <option value="3">Ligação</option>
               </select>
 
-              <label for="satifaction-level" class="form-label">Nível de satisfação:</label>
+              <label for="satisfaction-level" class="form-label">Nível de satisfação:</label>
               <input type="range" class="form-range contact__input" id="satifaction-level">
 
-              <div class="form-check">
+              <div class="form-check my-4">
                 <input class="form-check-input" type="checkbox" value="" id="checkDefault">
                 <label class="form-check-label" for="checkDefault">
                   Deseja receber novidades por email?
                 </label>
               </div>
 
-              <button type="button" class="btn btn-primary btn-default w-100 fs-5 fw-medium mt-3">Enviar</button>
+              <button type="button" class="btn btn-primary btn-default w-100 fs-5 fw-medium mt-3 py-3">Enviar</button>
             </form>
           </div>
         </div>
@@ -242,13 +247,13 @@
   <footer class="footer text-center">
     <section class="footer__socials">
       <a href="#!" class="btn">
-        <i class="bi bi-whatsapp fs-1 footer__social-icon"></i>
+        <i class="bi bi-whatsapp fs-2 footer__social-icon"></i>
       </a>
       <a href="#!" class="btn">
-        <i class="bi bi-instagram fs-1 footer__social-icon"></i>
+        <i class="bi bi-instagram fs-2 footer__social-icon"></i>
       </a>
       <a href="#!" class="btn">
-        <i class="bi bi-twitter fs-1 footer__social-icon"></i>
+        <i class="bi bi-twitter fs-2 footer__social-icon"></i>
       </a>
     </section>
     <p class="m-0">2025 <i class="bi bi-c-circle"></i> Desenvolvido por Vinicius durante curso da Alura.</p>
@@ -258,7 +263,7 @@
   <div class="offcanvas offcanvas-end" tabindex="-1" id="canvas-1" aria-labelledby="offcanvasRightLabel-1">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasRightLabel-1">Café & Bistrô</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
     </div>
 
     <div class="offcanvas-body">
@@ -315,7 +320,7 @@
   <div class="offcanvas offcanvas-end" tabindex="-1" id="canvas-2" aria-labelledby="offcanvasRightLabel-2">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasRightLabel-2">Buffet</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
     </div>
 
     <div class="offcanvas-body">
@@ -356,7 +361,7 @@
   <div class="offcanvas offcanvas-end" tabindex="-1" id="canvas-3" aria-labelledby="offcanvasRightLabel-3">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasRightLabel-3">Delivery</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
     </div>
 
     <div class="offcanvas-body">
@@ -398,8 +403,8 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <header class="modal-header">
-          <h2 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Cafés tradicionais</h2>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h2 class="modal-title fs-3 fw-semibold" id="exampleModalLabel">Cafés tradicionais</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
         </header>
         <section class="modal-body">
           <img src="./assets/produtos-cafe-tradicional.png" alt="Xícara de café preto com grãos de café ao lado"
@@ -423,8 +428,8 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <header class="modal-header">
-          <h2 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Cafés Especiais</h2>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h2 class="modal-title fs-3 fw-semibold" id="exampleModalLabel">Cafés Especiais</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
         </header>
         <section class="modal-body">
           <img src="./assets/produtos-cafe-especial.png" alt="Xícara de café com leite decorado com arte em espuma"
@@ -452,8 +457,8 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <header class="modal-header">
-          <h2 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Smoothies e Vitaminas</h2>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h2 class="modal-title fs-3 fw-semibold" id="exampleModalLabel">Smoothies e Vitaminas</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
         </header>
         <section class="modal-body">
           <img src="./assets/produtos-vitaminas.png"
@@ -478,8 +483,8 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <header class="modal-header">
-          <h2 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Pães e Focaccias</h2>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h2 class="modal-title fs-3 fw-semibold" id="exampleModalLabel">Pães e Focaccias</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
         </header>
         <section class="modal-body">
           <img src="./assets/produtos-paes.png" alt="Cesta com pães variados, incluindo focaccias e baguetes"
@@ -504,8 +509,8 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <header class="modal-header">
-          <h2 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Doces</h2>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h2 class="modal-title fs-3 fw-semibold" id="exampleModalLabel">Doces</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
         </header>
         <section class="modal-body">
           <img src="./assets/produtos-doces.png"
@@ -530,8 +535,8 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <header class="modal-header">
-          <h2 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Salgados</h2>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h2 class="modal-title fs-3 fw-semibold" id="exampleModalLabel">Salgados</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
         </header>
         <section class="modal-body">
           <img src="./assets/produtos-salgados.png" alt="Torta salgada dourada cortada em fatias"
